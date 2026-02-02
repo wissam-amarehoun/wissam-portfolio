@@ -300,29 +300,71 @@
 </div>
 
         <div id="expJapan" class="hidden fixed inset-0 bg-slate-950/95 z-[100] flex items-center justify-center p-4" onclick="closeModal('expJapan')">
-            <div class="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-[2rem] p-10 modal-content" onclick="event.stopPropagation()">
-                <div class="flex justify-between items-start mb-10">
-                    <div>
-                        <span class="text-sky-400 font-black text-xs uppercase tracking-widest">Experience / Japan</span>
-                        <h2 class="text-4xl font-black text-white italic uppercase mt-2 leading-none">Cyber Research Engineer @ NITech</h2>
-                    </div>
-                    <button onclick="closeModal('expJapan')" class="text-3xl hover:text-sky-400">&times;</button>
+    <div class="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-[2rem] p-8 md:p-12 modal-content" onclick="event.stopPropagation()">
+        
+        <div class="flex justify-between items-start mb-10 border-b border-white/10 pb-6">
+            <div>
+                <span class="text-indigo-400 font-black text-xs uppercase tracking-[0.2em]">Research & Development / Japan (Nagoya)</span>
+                <h2 class="text-3xl md:text-4xl font-black text-white italic uppercase mt-2">Cyber Research Engineer @ NITech</h2>
+            </div>
+            <button onclick="closeModal('expJapan')" class="text-slate-400 hover:text-sky-400 transition-colors">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+
+        <div class="mb-10 p-6 bg-indigo-500/5 border border-indigo-500/10 rounded-2xl">
+            <p class="text-indigo-300 font-medium italic text-sm md:text-base leading-relaxed">
+                "Conception et développement d'un système IDS/IPS sur mesure pour les architectures distribuées, alliant analyse de trafic temps réel et automatisation de la réponse aux incidents."
+            </p>
+        </div>
+
+        <div class="space-y-10">
+            
+            <div>
+                <h4 class="text-indigo-400 font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <i class="fas fa-code"></i> IDS/IPS Engineering
+                </h4>
+                <div class="grid md:grid-cols-2 gap-6 text-sm text-slate-300">
+                    <ul class="space-y-3">
+                        <li class="flex gap-3"><span class="text-indigo-500 font-bold">•</span> Architecture d'un moteur de détection custom via <strong>Python</strong> et <strong>Tshark/Wireshark</strong>.</li>
+                        <li class="flex gap-3"><span class="text-indigo-500 font-bold">•</span> Analyse temps réel du trafic réseau pour identifier scans et attaques brute-force.</li>
+                    </ul>
+                    <ul class="space-y-3">
+                        <li class="flex gap-3"><span class="text-indigo-500 font-bold">•</span> Optimisation de la fiabilité : réduction drastique des faux positifs par affinage comportemental.</li>
+                    </ul>
                 </div>
-                <div class="space-y-6 text-slate-300">
-                    <p class="text-lg font-bold italic border-l-2 border-sky-500 pl-4">Custom IDS/IPS development for distributed systems.</p>
-                    <div class="grid md:grid-cols-2 gap-6 text-sm">
-                        <ul class="space-y-3">
-                            <li>• Developed IDS/IPS using Python & Tshark for real-time traffic analysis.</li>
-                            <li>• Automated prevention: malicious IP blocking & offender banning.</li>
-                        </ul>
-                        <ul class="space-y-3">
-                            <li>• Reduced false positives via behavioral threshold tuning.</li>
-                            <li>• PCAP forensic generation and presentation of academic results.</li>
-                        </ul>
+            </div>
+
+            <div class="bg-white/5 rounded-2xl p-6 border border-white/5">
+                <h4 class="text-indigo-400 font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <i class="fas fa-bolt"></i> Automated Defense & Forensics
+                </h4>
+                <div class="grid md:grid-cols-2 gap-6 text-sm text-slate-300">
+                    <div class="space-y-3">
+                        <p class="font-semibold text-white text-[10px] uppercase tracking-wider">Mitigation Active :</p>
+                        <p>Implémentation du blocage automatique d'IP malveillantes, bannissement des attaquants et alertes administrateur basées sur des seuils critiques.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="font-semibold text-white text-[10px] uppercase tracking-wider">Analyse Post-Mortem :</p>
+                        <p>Génération automatisée de logs détaillés et de fichiers PCAP pour l'analyse forensique et le tracking d'incidents.</p>
                     </div>
                 </div>
             </div>
+
+            <div>
+                <h4 class="text-indigo-400 font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <i class="fas fa-microscope"></i> Research Validation
+                </h4>
+                <ul class="grid md:grid-cols-2 gap-x-10 gap-y-3 text-sm text-slate-300">
+                    <li class="flex gap-3"><span class="text-indigo-500 font-bold">•</span> Réalisation de tests de charge et de stress pour valider l'efficacité du système.</li>
+                    <li class="flex gap-3"><span class="text-indigo-500 font-bold">•</span> Documentation technique complète et présentation des résultats devant le laboratoire.</li>
+                    <li class="flex gap-3 items-center"><span class="bg-green-500/20 text-green-400 text-[10px] px-2 py-0.5 rounded font-bold uppercase">Projet Validé</span> par le superviseur académique de NITech.</li>
+                </ul>
+            </div>
+
         </div>
+    </div>
+</div>
 
         <div id="expMalaysia" class="hidden fixed inset-0 bg-slate-950/95 z-[100] flex items-center justify-center p-4" onclick="closeModal('expMalaysia')">
             <div class="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-[2rem] p-10 modal-content" onclick="event.stopPropagation()">
