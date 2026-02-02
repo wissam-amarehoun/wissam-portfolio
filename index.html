@@ -7,254 +7,273 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --cyber-dark: #0f172a;
-            --cyber-accent: #38bdf8;
-        }
+        :root { --cyber-dark: #0f172a; --cyber-accent: #38bdf8; }
         body { background-color: #0f172a; color: #e2e8f0; font-family: 'Inter', sans-serif; }
         .glass { background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .card-hover:hover { border-color: var(--cyber-accent); transform: translateY(-5px); transition: all 0.3s ease; cursor: pointer; }
+        .card-hover:hover { border-color: var(--cyber-accent); transform: translateY(-3px); transition: all 0.3s ease; cursor: pointer; }
         .bg-gradient { background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%); }
         .skill-tag { background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); color: #7dd3fc; }
+        .modal-content::-webkit-scrollbar { width: 6px; }
+        .modal-content::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 glass px-6 py-4">
+    <nav class="fixed w-full z-50 glass px-6 py-4 border-b border-white/5">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <span class="text-xl font-bold tracking-tighter text-sky-400 italic">WA.SECURITY</span>
-            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
-                <a href="#about" class="hover:text-sky-400">Profile</a>
-                <a href="#experience" class="hover:text-sky-400">Experience</a>
-                <a href="#skills" class="hover:text-sky-400">Skills</a>
-                <a href="#certs" class="hover:text-sky-400">Certifications</a>
+            <span class="text-xl font-black tracking-tighter text-sky-400">WA<span class="text-white">.SEC</span></span>
+            <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-[0.2em]">
+                <a href="#about" class="hover:text-sky-400 transition">Profile</a>
+                <a href="#experience" class="hover:text-sky-400 transition">Experience</a>
+                <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+                <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+                <a href="#certs" class="hover:text-sky-400 transition">Certs</a>
             </div>
-            <a href="mailto:wissam.amarehoun@efrei.net" class="bg-gradient px-6 py-2 rounded-full text-xs font-bold shadow-lg shadow-sky-500/20 uppercase">Get in touch</a>
+            <a href="mailto:wissam.amarehoun@efrei.net" class="bg-gradient px-6 py-2 rounded-full text-[10px] font-bold shadow-lg shadow-sky-500/20 uppercase">Contact</a>
         </div>
     </nav>
 
     <section id="about" class="pt-40 pb-20 px-6">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="w-56 h-56 md:w-72 md:h-72 relative">
-                <div class="absolute inset-0 bg-gradient rounded-full blur-3xl opacity-20 animate-pulse"></div>
-                <img src="wissam.png" alt="Wissam Amarehoun" class="rounded-2xl w-full h-full object-cover border-2 border-sky-500/30 relative z-10 shadow-2xl shadow-sky-500/10">
+            <div class="w-56 h-56 md:w-72 md:h-72 relative shrink-0">
+                <div class="absolute inset-0 bg-gradient rounded-3xl blur-3xl opacity-20"></div>
+                <img src="wissam.png" alt="Wissam" class="rounded-3xl w-full h-full object-cover border border-white/10 relative z-10 shadow-2xl">
             </div>
-            <div class="flex-1 text-center md:text-left">
-                <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tight">Wissam <span class="text-sky-400">Amarehoun</span></h1>
-                <h2 class="text-xl md:text-2xl text-slate-300 font-light mb-6">Cybersecurity Engineer / SOC Analyst</h2>
+            <div class="text-center md:text-left">
+                <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tighter">Wissam <span class="text-sky-400 underline decoration-sky-500/30">Amarehoun</span></h1>
+                <h2 class="text-xl md:text-2xl text-slate-300 font-medium mb-6">Cybersecurity Engineer / SOC Analyst</h2>
                 <p class="text-slate-400 text-lg max-w-2xl leading-relaxed">
-                    Cybersecurity Engineer with international experience (**France, Malaysia, Japan**). Specialized in SOC operations (L1/L2/L3), threat detection, incident response, and security monitoring across critical infrastructures. Skilled in SIEM (Splunk, LogPoint, Sentinel), EDR/XDR solutions, threat hunting, pentesting, and automation of security workflows.
+                    Cybersecurity Engineer with international experience (**France, Malaysia, Japan**). Specialized in SOC operations (L1/L2/L3), threat detection, incident response, and security monitoring across critical infrastructures.
                 </p>
-                <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-6 items-center">
-                    <a href="https://www.linkedin.com/in/wissam-amarehoun/" class="text-3xl hover:text-sky-400 transition"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:wissam.amarehoun@efrei.net" class="text-3xl hover:text-sky-400 transition"><i class="fas fa-envelope"></i></a>
-                    <span class="flex items-center gap-2 text-sm bg-slate-800/50 border border-slate-700 px-4 py-2 rounded-full"><i class="fas fa-map-marker-alt text-sky-400"></i> Paris, France</span>
+                <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="https://www.linkedin.com/in/wissam-amarehoun/" class="p-3 bg-slate-800 rounded-xl hover:text-sky-400 transition"><i class="fab fa-linkedin text-2xl"></i></a>
+                    <div class="flex items-center gap-3 bg-slate-800/50 px-5 py-2 rounded-xl border border-white/5">
+                        <i class="fas fa-map-marker-alt text-sky-400"></i>
+                        <span class="text-sm font-medium">Paris, France</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-24 bg-slate-900/30 px-6">
+    <section id="experience" class="py-24 bg-slate-900/50 px-6">
         <div class="max-w-5xl mx-auto">
-            <h3 class="text-3xl font-bold mb-16 flex items-center gap-4"><span class="h-1 w-12 bg-sky-500"></span>Professional Experience</h3>
+            <h3 class="text-3xl font-black mb-12 flex items-center gap-4 italic uppercase tracking-tighter"><span class="h-1 w-8 bg-sky-500"></span>Professional Experience</h3>
             
-            <div class="space-y-6">
-                <div class="glass p-8 rounded-2xl card-hover flex flex-col md:flex-row justify-between items-start gap-4" onclick="openModal('modalADP')">
-                    <div>
-                        <h4 class="text-2xl font-bold text-white">SOC Analyst</h4>
-                        <p class="text-sky-400 font-medium">Groupe ADP (Paris Airports)</p>
-                        <p class="text-slate-500 text-sm mt-1">April 2025 - October 2025 | France</p>
+            <div class="grid gap-6">
+                <div class="glass p-8 rounded-3xl card-hover border-l-4 border-l-sky-500" onclick="openModal('expADP')">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h4 class="text-xl font-black text-white uppercase italic">SOC Analyst @ Groupe ADP</h4>
+                        <span class="text-sky-400 font-mono text-sm">2025 (France)</span>
                     </div>
-                    <span class="text-xs font-bold text-sky-400 border border-sky-400/30 px-3 py-1 rounded">Click for details</span>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">Monitored and investigated security events across enterprise systems (L1/L2/L3 SOC), utilizing SIEM (LogPoint) and EDR (TEHTRIS) tools. Coordinated incident response, threat hunting, and security reporting for critical infrastructure.</p>
+                    <span class="text-[10px] font-black text-sky-400 uppercase tracking-widest bg-sky-500/10 px-3 py-1 rounded-full">View Details →</span>
                 </div>
 
-                <div class="glass p-8 rounded-2xl card-hover flex flex-col md:flex-row justify-between items-start gap-4" onclick="openModal('modalJapan')">
-                    <div>
-                        <h4 class="text-2xl font-bold text-white">Cybersecurity Research Engineer</h4>
-                        <p class="text-sky-400 font-medium">NITech (Nagoya Institute of Technology)</p>
-                        <p class="text-slate-500 text-sm mt-1">October 2024 - March 2025 | Japan</p>
+                <div class="glass p-8 rounded-3xl card-hover border-l-4 border-l-indigo-500" onclick="openModal('expJapan')">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h4 class="text-xl font-black text-white uppercase italic">Cyber Research Engineer @ NITech</h4>
+                        <span class="text-sky-400 font-mono text-sm">2024 - 2025 (Japan)</span>
                     </div>
-                    <span class="text-xs font-bold text-sky-400 border border-sky-400/30 px-3 py-1 rounded">Click for details</span>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">Designed and implemented IDS/IPS solutions for distributed systems. Analyzed network traffic, detected anomalous behaviors, and automated threat prevention mechanisms while minimizing false positives.</p>
+                    <span class="text-[10px] font-black text-sky-400 uppercase tracking-widest bg-sky-500/10 px-3 py-1 rounded-full">View Details →</span>
                 </div>
 
-                <div class="glass p-8 rounded-2xl card-hover flex flex-col md:flex-row justify-between items-start gap-4" onclick="openModal('modalMalaysia')">
-                    <div>
-                        <h4 class="text-2xl font-bold text-white">Cybersecurity Engineer (Pentesting)</h4>
-                        <p class="text-sky-400 font-medium">APU FSeC</p>
-                        <p class="text-slate-500 text-sm mt-1">October 2023 - March 2024 | Malaysia</p>
+                <div class="glass p-8 rounded-3xl card-hover border-l-4 border-l-purple-500" onclick="openModal('expMalaysia')">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h4 class="text-xl font-black text-white uppercase italic">Pentester @ APU FSeC</h4>
+                        <span class="text-sky-400 font-mono text-sm">2023 - 2024 (Malaysia)</span>
                     </div>
-                    <span class="text-xs font-bold text-sky-400 border border-sky-400/30 px-3 py-1 rounded">Click for details</span>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">Conducted web application penetration tests, identifying vulnerabilities such as XSS, SQLi, and LFI. Delivered detailed assessments, attack surface analyses, and remediation recommendations to clients.</p>
+                    <span class="text-[10px] font-black text-sky-400 uppercase tracking-widest bg-sky-500/10 px-3 py-1 rounded-full">View Details →</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-24 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="text-3xl font-bold mb-16 text-center italic">Technical Arsenal</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="glass p-8 rounded-3xl">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-sky-500/20 flex items-center justify-center rounded-lg text-sky-400"><i class="fas fa-satellite-dish"></i></div>
-                        <h4 class="text-xl font-bold uppercase tracking-widest text-sm text-sky-400 underline">Detection & Response</h4>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag px-3 py-1 rounded text-xs">Splunk</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">LogPoint</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">Azure Sentinel</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">ELK</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">TEHTRIS EDR</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">SentinelOne</span>
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-black mb-12 flex items-center gap-4 italic uppercase tracking-tighter"><span class="h-1 w-8 bg-sky-500"></span>Technical Projects</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass rounded-3xl overflow-hidden card-hover" onclick="openModal('proj1')">
+                <div class="h-48 bg-slate-800 flex items-center justify-center border-b border-white/5">
+                    <i class="fas fa-shield-virus text-6xl text-sky-500/40"></i>
+                </div>
+                <div class="p-8">
+                    <h4 class="text-xl font-black text-white mb-2 uppercase">Automated Vulnerability Scanner</h4>
+                    <p class="text-slate-400 text-sm mb-4">Python-based tool for network reconnaissance and CVE identification using Nmap & Shodan APIs.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] skill-tag px-2 py-1 rounded uppercase font-bold">Python</span>
+                        <span class="text-[10px] skill-tag px-2 py-1 rounded uppercase font-bold">Automation</span>
                     </div>
                 </div>
-
-                <div class="glass p-8 rounded-3xl">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-sky-500/20 flex items-center justify-center rounded-lg text-sky-400"><i class="fas fa-user-secret"></i></div>
-                        <h4 class="text-xl font-bold uppercase tracking-widest text-sm text-sky-400 underline">Offensive & Tools</h4>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag px-3 py-1 rounded text-xs">Pentest Web/Net</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">Metasploit</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">Burp Suite</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">Nmap</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">Nessus</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">MITRE ATT&CK</span>
+            </div>
+            
+            <div class="glass rounded-3xl overflow-hidden card-hover" onclick="openModal('proj2')">
+                <div class="h-48 bg-slate-800 flex items-center justify-center border-b border-white/5">
+                    <i class="fas fa-network-wired text-6xl text-indigo-500/40"></i>
+                </div>
+                <div class="p-8">
+                    <h4 class="text-xl font-black text-white mb-2 uppercase">Active Directory Lab Audit</h4>
+                    <p class="text-slate-400 text-sm mb-4">Building and auditing a secure AD environment: GPO hardening, Bloodhound analysis, and Kerberoasting mitigation.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] skill-tag px-2 py-1 rounded uppercase font-bold">Windows Server</span>
+                        <span class="text-[10px] skill-tag px-2 py-1 rounded uppercase font-bold">Hardening</span>
                     </div>
                 </div>
-
-                <div class="glass p-8 rounded-3xl">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-sky-500/20 flex items-center justify-center rounded-lg text-sky-400"><i class="fas fa-terminal"></i></div>
-                        <h4 class="text-xl font-bold uppercase tracking-widest text-sm text-sky-400 underline">Scripting & Dev</h4>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag px-3 py-1 rounded text-xs">Python</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">Bash</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">C / Java</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">PHP / SQL</span>
-                        <span class="skill-tag px-3 py-1 rounded text-xs">Automation</span>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <section id="certs" class="py-24 bg-slate-900/30 px-6">
+    <section id="skills" class="py-24 bg-slate-900/50 px-6">
         <div class="max-w-6xl mx-auto text-center">
-            <h3 class="text-3xl font-bold mb-16">Credentials & Certifications</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                <div class="glass p-6 rounded-2xl flex flex-col items-center">
-                    <div class="w-20 h-24 bg-slate-800 mb-4 rounded border border-slate-700 flex items-center justify-center overflow-hidden">
-                        <img src="cert-anssi.png" alt="ANSSI" class="w-full h-full object-contain opacity-50 hover:opacity-100 transition cursor-zoom-in">
+            <h3 class="text-3xl font-black mb-16 italic uppercase tracking-tighter">Technical Arsenal</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="glass p-8 rounded-3xl">
+                    <h4 class="text-sky-400 font-black text-xs uppercase tracking-widest mb-6">SOC & Incident Response</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">Splunk</span>
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">LogPoint</span>
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">TEHTRIS EDR</span>
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">Threat Hunting</span>
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">MITRE ATT&CK</span>
                     </div>
-                    <p class="text-xs font-bold">MOOC ANSSI</p>
-                    <p class="text-[10px] text-slate-500">2024</p>
                 </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center border-sky-500/50 border">
-                    <div class="w-20 h-24 bg-slate-800 mb-4 rounded border border-slate-700 flex items-center justify-center overflow-hidden">
-                        <img src="cert-ejpt.png" alt="eJPT" class="w-full h-full object-contain opacity-50 hover:opacity-100 transition">
+                <div class="glass p-8 rounded-3xl">
+                    <h4 class="text-sky-400 font-black text-xs uppercase tracking-widest mb-6">Offensive & Networks</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">Metasploit</span>
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">Burp Suite</span>
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">Nmap</span>
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">Wireshark</span>
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">Firewalls/VPN</span>
                     </div>
-                    <p class="text-xs font-bold text-sky-400">eJPT v2</p>
-                    <p class="text-[10px] text-slate-500">2025</p>
                 </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center">
-                    <div class="w-20 h-24 flex items-center justify-center">
-                        <i class="fas fa-language text-4xl text-slate-600"></i>
+                <div class="glass p-8 rounded-3xl">
+                    <h4 class="text-sky-400 font-black text-xs uppercase tracking-widest mb-6">Automation & Dev</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">Python</span>
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">Bash</span>
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">SQL</span>
+                        <span class="skill-tag px-3 py-1 rounded text-[10px] font-bold">API Security</span>
                     </div>
-                    <p class="text-xs font-bold">TOEIC: 860</p>
-                    <p class="text-[10px] text-slate-500">2025</p>
-                </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center border-sky-500/50 border">
-                    <div class="w-20 h-24 bg-slate-800 mb-4 rounded border border-slate-700 flex items-center justify-center overflow-hidden">
-                        <img src="cert-sec-plus.png" alt="CompTIA Sec+" class="w-full h-full object-contain opacity-50 hover:opacity-100 transition">
-                    </div>
-                    <p class="text-xs font-bold text-sky-400">Security+</p>
-                    <p class="text-[10px] text-slate-500">2025</p>
-                </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center">
-                    <div class="w-20 h-24 bg-slate-800 mb-4 rounded border border-slate-700 flex items-center justify-center overflow-hidden">
-                        <img src="cert-cysa.png" alt="CompTIA CySA+" class="w-full h-full object-contain opacity-50 hover:opacity-100 transition">
-                    </div>
-                    <p class="text-xs font-bold">CySA+</p>
-                    <p class="text-[10px] text-slate-500">2026</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="modalADP" class="hidden fixed inset-0 bg-black/95 flex items-center justify-center z-[100] p-6">
-        <div class="bg-slate-900 border border-slate-700 max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-3xl p-10 relative">
-            <button onclick="closeModal('modalADP')" class="absolute top-6 right-6 text-slate-400 hover:text-white text-3xl">&times;</button>
-            <h2 class="text-3xl font-bold text-sky-400 mb-2 underline tracking-tighter italic">SOC Analyst / Cybersecurity Engineer</h2>
-            <p class="text-slate-400 mb-8 font-bold tracking-widest text-sm uppercase">Groupe ADP (Paris Airports) • Internship</p>
-            <div class="grid md:grid-cols-2 gap-8 text-slate-300 text-sm leading-relaxed">
-                <ul class="space-y-3 list-none">
-                    <li class="flex gap-2"><span class="text-sky-500">▹</span> Real-time monitoring & alert triage (L1–L3 activities).</li>
-                    <li class="flex gap-2"><span class="text-sky-500">▹</span> SIEM LogPoint: correlation, investigations, and custom alerts.</li>
-                    <li class="flex gap-2"><span class="text-sky-500">▹</span> EDR TEHTRIS eGambit: endpoint telemetry correlation.</li>
-                    <li class="flex gap-2"><span class="text-sky-500">▹</span> Proactive Threat Hunting via MITRE ATT&CK framework.</li>
-                </ul>
-                <ul class="space-y-3 list-none">
-                    <li class="flex gap-2"><span class="text-sky-500">▹</span> Behavioral log analysis & detection rule tuning.</li>
-                    <li class="flex gap-2"><span class="text-sky-500">▹</span> Incident management & cross-functional coordination.</li>
-                    <li class="flex gap-2"><span class="text-sky-500">▹</span> Automation of reporting using search templates.</li>
-                    <li class="flex gap-2"><span class="text-sky-500">▹</span> Dashboard building for security metrics visualization.</li>
-                </ul>
+    <section id="certs" class="py-24 px-6 max-w-6xl mx-auto text-center">
+        <h3 class="text-3xl font-black mb-16 italic uppercase tracking-tighter">Certifications</h3>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+            <div class="glass p-4 rounded-2xl">
+                <div class="h-24 bg-slate-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden border border-white/5">
+                    <img src="cert-ejpt.png" alt="eJPT" class="w-full h-full object-contain">
+                </div>
+                <p class="text-[10px] font-black uppercase text-sky-400">eJPT v2</p>
+            </div>
+            <div class="glass p-4 rounded-2xl border border-sky-500/20">
+                <div class="h-24 bg-slate-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <img src="cert-secplus.png" alt="Sec+" class="w-full h-full object-contain">
+                </div>
+                <p class="text-[10px] font-black uppercase text-sky-400">Security+</p>
+            </div>
+            <div class="glass p-4 rounded-2xl">
+                <div class="h-24 flex items-center justify-center text-slate-600">
+                    <i class="fas fa-graduation-cap text-4xl"></i>
+                </div>
+                <p class="text-[10px] font-black uppercase">TOEIC: 860</p>
+            </div>
+            <div class="glass p-4 rounded-2xl border border-sky-500/20">
+                <div class="h-24 bg-slate-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <img src="cert-cysa.png" alt="CySA+" class="w-full h-full object-contain">
+                </div>
+                <p class="text-[10px] font-black uppercase text-sky-400">CySA+</p>
+            </div>
+            <div class="glass p-4 rounded-2xl">
+                <div class="h-24 bg-slate-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <img src="cert-anssi.png" alt="ANSSI" class="w-full h-full object-contain">
+                </div>
+                <p class="text-[10px] font-black uppercase">ANSSI MOOC</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="modalJapan" class="hidden fixed inset-0 bg-black/95 flex items-center justify-center z-[100] p-6">
-        <div class="bg-slate-900 border border-slate-700 max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-3xl p-10 relative">
-            <button onclick="closeModal('modalJapan')" class="absolute top-6 right-6 text-slate-400 hover:text-white text-3xl">&times;</button>
-            <h2 class="text-3xl font-bold text-sky-400 mb-2 underline tracking-tighter italic uppercase">Cybersecurity Research Engineer IDS/IPS</h2>
-            <p class="text-slate-400 mb-8 font-bold tracking-widest text-sm uppercase">NITech, Japan • Exchange</p>
-            <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
-                <p>Designed and developed a custom <b>Intrusion Detection and Prevention System (IDS/IPS)</b> using Python and network capture tools (Tshark/Wireshark).</p>
-                <ul class="space-y-3">
-                    <li class="flex gap-2 font-mono text-xs bg-black/40 p-2 rounded border-l-2 border-sky-500">▹ Real-time analysis of network traffic and PCAP files to detect brute-force.</li>
-                    <li class="flex gap-2 font-mono text-xs bg-black/40 p-2 rounded border-l-2 border-sky-500">▹ Automated prevention: malicious IP blocking & offender banning.</li>
-                    <li class="flex gap-2 font-mono text-xs bg-black/40 p-2 rounded border-l-2 border-sky-500">▹ Forensic analysis: automated PCAP generation for incident tracking.</li>
-                    <li class="flex gap-2 font-mono text-xs bg-black/40 p-2 rounded border-l-2 border-sky-500">▹ Presentation of results to the research laboratory.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="modalMalaysia" class="hidden fixed inset-0 bg-black/95 flex items-center justify-center z-[100] p-6">
-        <div class="bg-slate-900 border border-slate-700 max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-3xl p-10 relative">
-            <button onclick="closeModal('modalMalaysia')" class="absolute top-6 right-6 text-slate-400 hover:text-white text-3xl">&times;</button>
-            <h2 class="text-3xl font-bold text-sky-400 mb-2 italic tracking-tighter underline uppercase">Cybersecurity Engineer – Pentesting</h2>
-            <p class="text-slate-400 mb-8 font-bold tracking-widest text-sm uppercase">APU FSeC, Malaysia • Internship</p>
-            <div class="space-y-4 text-slate-300 text-sm leading-relaxed italic">
-                <p>Conducted penetration testing engagements for client companies seeking to secure their web applications.</p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="p-3 bg-slate-800 rounded-lg border border-slate-700">
-                        <p class="text-sky-400 font-bold mb-1 underline uppercase text-[10px]">Vulnerabilities</p>
-                        <p class="text-xs">XSS, SQL Injection, Directory Traversal, LFI.</p>
+    <div id="modal-container">
+        <div id="expADP" class="hidden fixed inset-0 bg-slate-950/95 z-[100] flex items-center justify-center p-4" onclick="closeModal('expADP')">
+            <div class="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-[2rem] p-10 modal-content" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-10">
+                    <div>
+                        <span class="text-sky-400 font-black text-xs uppercase tracking-widest">Experience / France</span>
+                        <h2 class="text-4xl font-black text-white italic uppercase mt-2 leading-none">SOC Analyst @ Groupe ADP</h2>
                     </div>
-                    <div class="p-3 bg-slate-800 rounded-lg border border-slate-700">
-                        <p class="text-sky-400 font-bold mb-1 underline uppercase text-[10px]">Tooling</p>
-                        <p class="text-xs">Burp Suite, Maltego, Wireshark, Nmap.</p>
+                    <button onclick="closeModal('expADP')" class="text-3xl hover:text-sky-400">&times;</button>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10 text-slate-300">
+                    <ul class="space-y-4 text-sm list-none font-medium">
+                        <li class="flex gap-4"><span class="text-sky-500 font-black italic">01</span> Real-time monitoring & alert triage (L1–L3 activities) in a critical airport infrastructure.</li>
+                        <li class="flex gap-4"><span class="text-sky-500 font-black italic">02</span> SIEM LogPoint: event correlation, writing custom queries, and threat hunting.</li>
+                        <li class="flex gap-4"><span class="text-sky-500 font-black italic">03</span> EDR TEHTRIS: telemetry correlation and endpoint investigation.</li>
+                    </ul>
+                    <ul class="space-y-4 text-sm list-none font-medium">
+                        <li class="flex gap-4"><span class="text-sky-500 font-black italic">04</span> Applied MITRE ATT&CK framework for proactive behavioral analysis.</li>
+                        <li class="flex gap-4"><span class="text-sky-500 font-black italic">05</span> Automated security reporting and search templates for investigations.</li>
+                        <li class="flex gap-4"><span class="text-sky-500 font-black italic">06</span> Built dashboards for security metrics and managed end-to-end incident response.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="expJapan" class="hidden fixed inset-0 bg-slate-950/95 z-[100] flex items-center justify-center p-4" onclick="closeModal('expJapan')">
+            <div class="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-[2rem] p-10 modal-content" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-10">
+                    <div>
+                        <span class="text-sky-400 font-black text-xs uppercase tracking-widest">Experience / Japan</span>
+                        <h2 class="text-4xl font-black text-white italic uppercase mt-2 leading-none">Cyber Research Engineer @ NITech</h2>
+                    </div>
+                    <button onclick="closeModal('expJapan')" class="text-3xl hover:text-sky-400">&times;</button>
+                </div>
+                <div class="space-y-6 text-slate-300">
+                    <p class="text-lg font-bold italic border-l-2 border-sky-500 pl-4">Custom IDS/IPS development for distributed systems.</p>
+                    <div class="grid md:grid-cols-2 gap-6 text-sm">
+                        <ul class="space-y-3">
+                            <li>• Developed IDS/IPS using Python & Tshark for real-time traffic analysis.</li>
+                            <li>• Automated prevention: malicious IP blocking & offender banning.</li>
+                        </ul>
+                        <ul class="space-y-3">
+                            <li>• Reduced false positives via behavioral threshold tuning.</li>
+                            <li>• PCAP forensic generation and presentation of academic results.</li>
+                        </ul>
                     </div>
                 </div>
-                <p class="mt-4">Produced detailed technical reports for clients, outlining findings and mitigation strategies.</p>
+            </div>
+        </div>
+
+        <div id="expMalaysia" class="hidden fixed inset-0 bg-slate-950/95 z-[100] flex items-center justify-center p-4" onclick="closeModal('expMalaysia')">
+            <div class="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-[2rem] p-10 modal-content" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-10">
+                    <div>
+                        <span class="text-sky-400 font-black text-xs uppercase tracking-widest">Experience / Malaysia</span>
+                        <h2 class="text-4xl font-black text-white italic uppercase mt-2 leading-none">Pentester @ APU FSeC</h2>
+                    </div>
+                    <button onclick="closeModal('expMalaysia')" class="text-3xl hover:text-sky-400">&times;</button>
+                </div>
+                <div class="space-y-6 text-slate-300">
+                    <div class="grid md:grid-cols-2 gap-8 text-sm">
+                        <div class="bg-black/40 p-6 rounded-2xl border border-white/5">
+                            <h5 class="text-sky-400 font-black text-xs uppercase mb-4 tracking-tighter italic underline">Technical Focus</h5>
+                            <p>Exploited XSS, SQL Injection, Directory Traversal, and LFI on client web applications. Analyzed attack surfaces and evaluated security posture.</p>
+                        </div>
+                        <div class="bg-black/40 p-6 rounded-2xl border border-white/5">
+                            <h5 class="text-sky-400 font-black text-xs uppercase mb-4 tracking-tighter italic underline">Tools Used</h5>
+                            <p>Burp Suite, Maltego, Wireshark, Nmap. Delivered detailed technical remediation reports.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer class="py-20 text-center border-t border-slate-800 mt-20">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-            <p class="text-slate-500 text-sm">© 2026 Wissam Amarehoun | Built for Security Operations</p>
-            <div class="flex gap-4 text-xs font-bold uppercase tracking-widest">
-                <span class="text-sky-400">English: Advanced</span>
-                <span class="text-slate-600">|</span>
-                <span class="text-sky-400">French: Native</span>
-            </div>
-        </div>
+    <footer class="py-20 text-center text-slate-600 text-[10px] uppercase font-black tracking-widest">
+        <p>© 2026 Wissam Amarehoun | Secure Engineering Portfolio</p>
     </footer>
 
     <script>
@@ -265,12 +284,6 @@
         function closeModal(id) {
             document.getElementById(id).classList.add('hidden');
             document.body.style.overflow = 'auto';
-        }
-        window.onclick = function(event) {
-            if (event.target.id.startsWith('modal')) {
-                event.target.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }
         }
     </script>
 </body>
