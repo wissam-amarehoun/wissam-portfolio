@@ -235,30 +235,69 @@
         </div>
     </section>
 
-    <div id="modal-container">
-        <div id="expADP" class="hidden fixed inset-0 bg-slate-950/95 z-[100] flex items-center justify-center p-4" onclick="closeModal('expADP')">
-            <div class="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-[2rem] p-10 modal-content" onclick="event.stopPropagation()">
-                <div class="flex justify-between items-start mb-10">
-                    <div>
-                        <span class="text-sky-400 font-black text-xs uppercase tracking-widest">Experience / France</span>
-                        <h2 class="text-4xl font-black text-white italic uppercase mt-2 leading-none">SOC Analyst @ Groupe ADP</h2>
-                    </div>
-                    <button onclick="closeModal('expADP')" class="text-3xl hover:text-sky-400">&times;</button>
-                </div>
-                <div class="grid md:grid-cols-2 gap-10 text-slate-300">
-                    <ul class="space-y-4 text-sm list-none font-medium">
-                        <li class="flex gap-4"><span class="text-sky-500 font-black italic">01</span> Real-time monitoring & alert triage (L1–L3 activities) in a critical airport infrastructure.</li>
-                        <li class="flex gap-4"><span class="text-sky-500 font-black italic">02</span> SIEM LogPoint: event correlation, writing custom queries, and threat hunting.</li>
-                        <li class="flex gap-4"><span class="text-sky-500 font-black italic">03</span> EDR TEHTRIS: telemetry correlation and endpoint investigation.</li>
+    <div id="expADP" class="hidden fixed inset-0 bg-slate-950/95 z-[100] flex items-center justify-center p-4" onclick="closeModal('expADP')">
+    <div class="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-[2rem] p-8 md:p-12 modal-content" onclick="event.stopPropagation()">
+        
+        <div class="flex justify-between items-start mb-10 border-b border-white/10 pb-6">
+            <div>
+                <span class="text-sky-400 font-black text-xs uppercase tracking-[0.2em]">Experience / France (Paris Airport)</span>
+                <h2 class="text-3xl md:text-4xl font-black text-white italic uppercase mt-2">SOC Analyst @ Groupe ADP</h2>
+            </div>
+            <button onclick="closeModal('expADP')" class="text-slate-400 hover:text-sky-400 transition-colors">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+
+        <div class="space-y-10">
+            
+            <div>
+                <h4 class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <i class="fas fa-shield-halved"></i> SOC Operations & Incident Response
+                </h4>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex gap-3"><span class="text-sky-500 font-bold">•</span> Performed SOC L1–L3 activities: monitoring, triage, and deep-dive investigations.</li>
+                        <li class="flex gap-3"><span class="text-sky-500 font-bold">•</span> Investigated EDR alerts (TEHTRIS), correlating endpoint telemetry with SIEM data.</li>
+                        <li class="flex gap-3"><span class="text-sky-500 font-bold">•</span> Conducted proactive threat hunting using MITRE ATT&CK & OSINT (VirusTotal).</li>
                     </ul>
-                    <ul class="space-y-4 text-sm list-none font-medium">
-                        <li class="flex gap-4"><span class="text-sky-500 font-black italic">04</span> Applied MITRE ATT&CK framework for proactive behavioral analysis.</li>
-                        <li class="flex gap-4"><span class="text-sky-500 font-black italic">05</span> Automated security reporting and search templates for investigations.</li>
-                        <li class="flex gap-4"><span class="text-sky-500 font-black italic">06</span> Built dashboards for security metrics and managed end-to-end incident response.</li>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex gap-3"><span class="text-sky-500 font-bold">•</span> Performed behavioral log analysis to identify anomalous activities & emerging threats.</li>
+                        <li class="flex gap-3"><span class="text-sky-500 font-bold">•</span> Managed incidents end-to-end, coordinating with IT and Security teams.</li>
                     </ul>
                 </div>
             </div>
+
+            <div class="bg-white/5 rounded-2xl p-6 border border-white/5">
+                <h4 class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <i class="fas fa-microchip"></i> Detection Engineering & SIEM
+                </h4>
+                <div class="grid md:grid-cols-2 gap-6 text-sm text-slate-300">
+                    <div class="space-y-3">
+                        <p class="font-semibold text-white text-xs uppercase">Custom Content Development:</p>
+                        <p>Designed detection alerts for Windows, Linux, AD, Antivirus, and NAS log sources.</p>
+                        <p>Optimized LogPoint queries and tuned rules to significantly reduce false positives.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="font-semibold text-white text-xs uppercase">Data Normalization:</p>
+                        <p>Improved correlation quality through log source normalization and improvement initiatives.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <i class="fas fa-chart-line"></i> Reporting & Automation
+                </h4>
+                <ul class="grid md:grid-cols-2 gap-x-10 gap-y-3 text-sm text-slate-300">
+                    <li class="flex gap-3"><span class="text-sky-500 font-bold">•</span> Automated reporting using reusable search templates for investigations.</li>
+                    <li class="flex gap-3"><span class="text-sky-500 font-bold">•</span> Built dashboards to visualize security events and operational metrics.</li>
+                    <li class="flex gap-3"><span class="text-sky-500 font-bold">•</span> Delivered incident summaries and remediation advice to supervisors.</li>
+                </ul>
+            </div>
+
         </div>
+    </div>
+</div>
 
         <div id="expJapan" class="hidden fixed inset-0 bg-slate-950/95 z-[100] flex items-center justify-center p-4" onclick="closeModal('expJapan')">
             <div class="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-[2rem] p-10 modal-content" onclick="event.stopPropagation()">
